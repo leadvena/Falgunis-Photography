@@ -21,7 +21,9 @@ export default function Hero({ onPortfolioCall, onBookingCall }: HeroProps) {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-60"
+          preload="auto"
+          poster={HERO_IMAGE}
+          className="w-full h-full object-cover opacity-60 transform translate-z-0 will-change-transform"
         >
           <source src="https://www.pexels.com/download/video/6849058/" type="video/mp4" />
           {/* Fallback image if video fails to load or on slower connections */}
