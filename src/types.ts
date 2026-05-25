@@ -9,7 +9,7 @@ export interface CameraSettings {
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'wedding' | 'portrait' | 'family' | 'commercial';
+  category: 'newborn' | 'maternity' | 'milestone' | 'family';
   imageUrl: string;
   location: string;
   story: string;
@@ -26,7 +26,7 @@ export interface ExtraCustomOption {
 
 export interface ServicePackage {
   id: string;
-  category: 'wedding' | 'portrait' | 'family' | 'commercial';
+  category: 'newborn' | 'maternity' | 'milestone' | 'family';
   name: string;
   basePrice: number;
   tagline: string;

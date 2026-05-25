@@ -77,9 +77,9 @@ export default function Hero({ onPortfolioCall, onBookingCall }: HeroProps) {
           transition={{ duration: 1.4, delay: 0.7 }}
           className="max-w-2xl text-charcoal-200 text-sm sm:text-lg font-sans font-light tracking-wide leading-relaxed mb-10"
         >
-          Award-winning editorial and luxury photography in South Australia. 
-          Preserving pristine, high-fashion moments of weddings, fine art portraits, 
-          and brand campaigns. Crafted by Falguni.
+          Award-winning editorial and luxury newborn photography in South Australia. 
+          Preserving pristine, fine-art moments of maternity, newborns, and 
+          family milestones. Crafted by Falguni.
         </motion.p>
 
         {/* Action CTAs */}

@@ -119,8 +119,8 @@ export default function ContactForm({
                 <span className="italic text-champagne-300 font-extralight">Bespoke Session</span>
               </h2>
               <p className="font-sans text-xs sm:text-sm text-charcoal-350 tracking-wide font-light leading-relaxed">
-                We accept a strictly restricted amount of wedding and portrait commissions every season to preserve 
-                individual focus and flawless post-production. Complete and send your form below.
+                We accept a strictly restricted amount of newborn, maternity, and baby milestone commissions every season to preserve 
+                individual focus and flawless, organic post-production. Complete and send your form below.
               </p>
             </div>
 
@@ -344,10 +344,10 @@ export default function ContactForm({
                   className="w-full bg-charcoal-950 border border-charcoal-800 focus:border-champagne-400 px-4 py-3.5 text-xs text-charcoal-100 rounded-none focus:outline-none transition-colors font-sans"
                 >
                   <option value="">-- Choose A Beautiful Blueprint --</option>
-                  <option value="The Editorial Love Story">Wedding: The Editorial Love Story</option>
-                  <option value="The Fine-Art Portraiture">Portrait: The Fine-Art Portraiture</option>
-                  <option value="The Living Legacy">Family: The Living Legacy</option>
-                  <option value="The Prestige Brand Campaign">Commercial: The Prestige Brand Campaign</option>
+                  <option value="The Baby Masterpiece">Newborn: The Baby Masterpiece</option>
+                  <option value="The Divine Maternity">Maternity: The Divine Maternity</option>
+                  <option value="The Milestone Collection">Milestone: The Milestone Collection</option>
+                  <option value="The Golden Family Legacy">Family: The Golden Family Legacy</option>
                 </select>
               </div>
 

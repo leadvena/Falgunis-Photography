@@ -5,16 +5,16 @@ import { FALGUNI_PORTRAIT } from '../data/portfolioData';
 export default function About() {
   const coreValues = [
     {
-      title: 'Artisanal Chemistry',
-      desc: 'I believe the finest portraits stem from natural connection. My process begins with slow coffee, relaxed conversation, and building genuine trust.'
+      title: 'Certified Safety & Calm',
+      desc: 'As a certified and fully immunized newborn handler, your baby’s safety and absolute comfort are my primary directives. Our custom-designed Lightsview studio is meticulously sanitized, temperature-regulated to a soothing 26°C, and paired with custom white-noise environments.'
     },
     {
-      title: 'Symmetry & Shadow',
-      desc: 'Formally trained in composition, I watch shadows. I use natural and soft dynamic flash setups to create highly-sculpted, three-dimensional depth.'
+      title: 'Bespoke Organic Textures',
+      desc: 'I carefully procure organic merino wool wraps, pure heritage silks, and hand-crafted willow nests from curated global artisans, ensuring your infant rests on elements of unparalleled luxury and tenderness.'
     },
     {
-      title: 'Documentary Truth',
-      desc: 'While I choreograph editorial highlights, the raw, unscripted in-between laughter and real, teary gazes form the soul of your luxury album.'
+      title: 'Choreographed Tenderness',
+      desc: 'While I orchestrate classic editorial alignments, the raw, unscripted in-between breaths—micro-curls of tiny fingers, soft yawns, and a mother’s peaceful exhale—form the true soulful core of your luxury album.'
     }
   ];
 
@@ -72,19 +72,19 @@ export default function About() {
 
             <div className="font-sans text-xs sm:text-sm text-charcoal-300 font-light tracking-wide leading-relaxed space-y-4">
               <p>
-                Hello, I am Falguni. My love affair with photography began in the heritage vineyard alleys of McLaren Vale, 
-                where I discovered how a split-second of light could tell a profound life story. 
+                Hello, I am Falguni. My love affair with capturing beginning chapters started in the heritage vineyard valleys of South Australia, 
+                where I discovered how a fleeting moment of pure, raw connection could write a family's eternal narrative. 
                 Today, I call the beautiful, master-planned suburb of <strong className="text-champagne-200">Lightsview, South Australia</strong> my home and creative headquarters.
               </p>
               <p>
-                My working signature lies in the intersection of <strong className="text-champagne-200">fine art photography, natural lighting, and luxury editorial structure</strong>. 
-                My style is heavily inspired by classical European cinema and vintage Vogue layouts—focusing on 
-                captivating negative spaces, soft transitions, and deep, honest emotions.
+                My working signature lies in the intersection of <strong className="text-champagne-200">fine art newborn photography, organic light curation, and safety-first luxury styling</strong>. 
+                My style is heavily inspired by classical European minimalism and heritage aesthetic layouts—focusing on 
+                candid micro-movements, tiny features, and the serene, quiet elegance of new life.
               </p>
               <p>
-                Whether documenting an exquisite wedding in the Adelaide Hills, shooting minimalist corporate portraits 
-                at my local Lightsview studio, or shooting lifestyle brand catalogues in McLaren Vale, my ultimate 
-                quest remains unchanged: to design timeless, breathtaking legacies for people who appreciate the luxury of details.
+                At my climate-controlled, fully-equipped Lightsview studio, I design a custom, peaceful sanctuary where mothers feel like goddesses during maternity sessions 
+                and infants sleep in safety-certified bliss. My ultimate quest remains unchanged: 
+                to hand-craft timeless, breathtaking legacy publications for families who appreciate the luxury of details.
               </p>
             </div>
 

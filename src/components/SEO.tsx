@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export default function SEO() {
   useEffect(() => {
     // Set Document Title
-    document.title = "Falguni's Photography | Professional Photographer in Lightsview, SA";
+    document.title = "Falguni's Photography | Premier Fine-Art Newborn & Maternity Photographer in Lightsview, SA";
 
     // Set Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -14,7 +14,7 @@ export default function SEO() {
     }
     metaDescription.setAttribute(
       'content',
-      "Award-winning photography in Lightsview, South Australia. 5-star rated with 53 reviews. Weddings, portraits, family & commercial. Book now."
+      "Award-winning newborn, maternity, milestone, and family photography in Lightsview, South Australia. Certified safety & luxury organic styling. Book your session."
     );
 
     // Set Structured Schema Markup
@@ -68,28 +68,27 @@ export default function SEO() {
           "@type": "Photographer",
           "@id": "https://falgunisphotography.com.au/#photographer",
           "name": "Falguni",
-          "description": "Premium editorial and wedding photographer in South Australia.",
+          "description": "Premium fine-art newborn and maternity photographer in South Australia.",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Photography Services",
+            "name": "Newborn & Maternity Photography Services",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Wedding Photography",
-                  "description": "Prestige editorial wedding collections"
+                  "name": "The Baby Masterpiece Studio Session",
+                  "description": "Premium baby safety-first newborn sessions"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Fine-Art Portraiture",
-                  "description": "Stunning magazine-style portraits"
+                  "name": "The Divine Maternity",
+                  "description": "Exquisite fine-art pregnancy silhouettes and gowns"
                 }
               }
-              // Other offers...
             ]
           }
         }

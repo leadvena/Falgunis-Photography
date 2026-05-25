@@ -5,15 +5,15 @@ import { PORTFOLIO_ITEMS } from '../data/portfolioData';
 import { PortfolioItem } from '../types';
 
 export default function Gallery() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'wedding' | 'portrait' | 'family' | 'commercial'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'newborn' | 'maternity' | 'milestone' | 'family'>('all');
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
   const filterOptions = [
     { id: 'all', label: 'All Portfolios' },
-    { id: 'wedding', label: 'Weddings' },
-    { id: 'portrait', label: 'Fine Art Portraits' },
-    { id: 'family', label: 'Family Legacies' },
-    { id: 'commercial', label: 'Brand & Editorial' }
+    { id: 'newborn', label: 'Newborn Art' },
+    { id: 'maternity', label: 'Maternity Silhouettes' },
+    { id: 'milestone', label: 'Baby Milestones' },
+    { id: 'family', label: 'Family Legacies' }
   ] as const;
 
   const filteredItems = activeFilter === 'all'

@@ -1,11 +1,11 @@
 import { PortfolioItem, ServicePackage, ClientReview } from '../types';
 
-// Let's resolve the generated asset paths beautifully as strings.
-// This allows clean static bundling under Vite without strict module typings checking.
-const heroWedding = '/src/assets/images/hero_wedding_1779671234377.png';
-const falguniPortrait = '/src/assets/images/falguni_portrait.jpg';
-const familyShoot = '/src/assets/images/family_shoot_1779671272789.png';
-const commercialShoot = '/src/assets/images/commercial_shoot_1779671292380.png';
+// Let's resolve the generated asset paths beautifully as strings using standard Vite syntax.
+// This allows clean static bundling under Vite with correct hashed public URLs.
+const heroWedding = new URL('../assets/images/hero_wedding_1779671234377.png', import.meta.url).href;
+const falguniPortrait = new URL('../assets/images/falguni_portrait.jpg', import.meta.url).href;
+const familyShoot = new URL('../assets/images/family_shoot_1779671272789.png', import.meta.url).href;
+const commercialShoot = new URL('../assets/images/commercial_shoot_1779671292380.png', import.meta.url).href;
 
 export const HERO_IMAGE = heroWedding;
 export const FALGUNI_PORTRAIT = falguniPortrait;
@@ -13,11 +13,27 @@ export const FALGUNI_PORTRAIT = falguniPortrait;
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 'p1',
-    title: 'An Eternal Promise',
-    category: 'wedding',
+    title: 'Whisper of Innocence',
+    category: 'newborn',
+    imageUrl: 'https://images.unsplash.com/photo-1519689680058-324335c77ebe?auto=format&fit=crop&q=80&w=1200',
+    location: 'Lightsview Studio, Adelaide',
+    story: 'A quiet, peaceful moment of a 7-day-old newborn cradled in premium organic silk wraps, illuminated by the delicate, feather-soft morning light filtered through our custom Lightsview studio glass.',
+    settings: {
+      camera: 'Sony Alpha 7R V',
+      lens: 'Sony FE 90mm f/2.8 Macro G OSS',
+      aperture: 'f/2.8',
+      shutterSpeed: '1/160s',
+      iso: '100'
+    },
+    featured: true
+  },
+  {
+    id: 'p2',
+    title: 'Luminous Motherhood',
+    category: 'maternity',
     imageUrl: heroWedding,
-    location: 'McLaren Vale, South Australia',
-    story: 'Captured amidst the rolling hills of McLaren Vale, this frame embodies the pure, dramatic romance of a South Australian sunset. Utilizing soft backlighting and warm champagne tones, it symbolizes the beginning of their forever.',
+    location: 'Grange Sand Dunes, South Australia',
+    story: 'A timeless silhouette celebrating the divine strength of expectancy. Taken at golden hour with a flowing champagne-tinted silk robe dancing in the coastal South Australian breeze.',
     settings: {
       camera: 'Sony Alpha 7R V',
       lens: 'Sony FE 50mm f/1.2 GM',
@@ -28,28 +44,12 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     featured: true
   },
   {
-    id: 'p2',
-    title: 'The Modern Minimalist',
-    category: 'portrait',
-    imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200',
-    location: 'Lightsview Studio, Adelaide',
-    story: 'A classic fine-art portrait focusing on the raw emotion and delicate lighting. By stripping away extraneous backgrounds, we drew complete focus to the subject’s profound, quiet gaze.',
-    settings: {
-      camera: 'Sony Alpha 7R V',
-      lens: 'Sony FE 85mm f/1.4 GM',
-      aperture: 'f/1.8',
-      shutterSpeed: '1/160s',
-      iso: '200'
-    },
-    featured: true
-  },
-  {
     id: 'p3',
-    title: 'Golden Hour Laughs',
+    title: 'The First Embrace',
     category: 'family',
     imageUrl: familyShoot,
-    location: 'Grange Beach, South Australia',
-    story: 'Nothing compares to the authentic joy of a family together. This photo was taken on a breezy South Australian beach where the sunset hit the sand, highlighting their genuine, laughing interactions.',
+    location: 'Adelaide Hills, SA',
+    story: 'A raw, candid capturing of young parents laughing as they nestle their newborn baby under the golden-hour canopy of ancient Adelaide Hills trees.',
     settings: {
       camera: 'Sony Alpha 7 IV',
       lens: 'Sony FE 35mm f/1.4 GM',
@@ -61,27 +61,27 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: 'p4',
-    title: 'Architectural Solitude',
-    category: 'commercial',
-    imageUrl: commercialShoot,
-    location: 'Barossa Valley Boutique Winery',
-    story: 'Commissioned by a prestige winery in the Barossa. The shot captures the architectural intersection of ancient SA stone walls and contemporary glass, illuminated by the fading golden sky.',
+    title: 'Serene Discovery',
+    category: 'milestone',
+    imageUrl: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=1200',
+    location: 'Lightsview Studio, Adelaide',
+    story: 'Documenting the precious six-month milestone. Capturing those curious, soulful eyes and chubby baby details in a high-end, uncluttered minimalist style.',
     settings: {
       camera: 'Sony Alpha 7R V',
-      lens: 'Sony FE 16-35mm f/2.8 GM II',
-      aperture: 'f/5.6',
-      shutterSpeed: '1/15s',
-      iso: '100'
+      lens: 'Sony FE 85mm f/1.4 GM',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/160s',
+      iso: '200'
     },
     featured: true
   },
   {
     id: 'p5',
-    title: 'Champagne Reception',
-    category: 'wedding',
-    imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200',
-    location: 'Adelaide Hills, SA',
-    story: 'Detailed shot of the luxury table configuration and sparkling crystal under fairy lights, emphasizing the elegant editorial detail-focused work Falguni’s Photography is acclaimed for.',
+    title: 'The Nestled Sleep',
+    category: 'newborn',
+    imageUrl: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=1200',
+    location: 'Lightsview Studio, Adelaide',
+    story: 'Delicate macro shot of tiny curled toes and eyelash shadows as a newborn sleeps peacefully in a custom organic textured willow basket.',
     settings: {
       camera: 'Sony Alpha 7R V',
       lens: 'Sony FE 90mm f/2.8 Macro G OSS',
@@ -93,11 +93,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: 'p6',
-    title: 'The Editorial Eye',
-    category: 'portrait',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200',
-    location: 'Northfield Luxury Atelier',
-    story: 'An editorial workspace shoot highlighting masculine sophistication, utilizing high-contrast, moody charcoal lighting and classic styling.',
+    title: 'Sculpted Golden Line',
+    category: 'maternity',
+    imageUrl: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200',
+    location: 'McLaren Vale, South Australia',
+    story: 'Fine-art studio-lit maternity portrait. High-contrast monochromatic lighting highlighting the beautiful contours and graceful curves of motherhood.',
     settings: {
       camera: 'Sony Alpha 7R V',
       lens: 'Sony FE 50mm f/1.2 GM',
@@ -109,11 +109,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: 'p7',
-    title: 'Sunset Coastline Walk',
+    title: 'Generational Legacy',
     category: 'family',
     imageUrl: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1200',
-    location: 'Hallett Cove Coastal Trail, SA',
-    story: 'A sweeping dynamic landscape featuring a mother and children pacing along the dramatic South Australian boardwalk. Perfectly capturing movement, scale, and natural beauty.',
+    location: 'Lightsview Studio, Adelaide',
+    story: 'An elegant editorial portrait of three generations—grandmother, mother, and infant. Hand-crafted using deep moody charcoal backdrops and warm amber modeling lighting.',
     settings: {
       camera: 'Sony Alpha 7 IV',
       lens: 'Sony FE 24-70mm f/2.8 GM II',
@@ -125,11 +125,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: 'p8',
-    title: 'Luminous Shadows',
-    category: 'commercial',
-    imageUrl: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200',
-    location: 'Lightsview Luxury Showhome',
-    story: 'Commercial interior photography demonstrating control of ambient light and architectural symmetry. Soft afternoon shadow lines create a deep sense of serenity and structure.',
+    title: 'Pure Wonderment',
+    category: 'milestone',
+    imageUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1200',
+    location: 'Lightsview Studio, Adelaide',
+    story: 'A radiant one-year sitter session capturing genuine, bubbly giggles. Simplicity in design allows the child’s vibrant developing personality to completely fill the frame.',
     settings: {
       camera: 'Sony Alpha 7R V',
       lens: 'Sony FE 16-35mm f/2.8 GM II',
@@ -143,81 +143,81 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
 
 export const SERVICE_PACKAGES: ServicePackage[] = [
   {
-    id: 's_wedding',
-    category: 'wedding',
-    name: 'The Editorial Love Story',
-    basePrice: 3450,
-    tagline: 'High-end wedding photography for couples seeking luxury, editorial imagery.',
-    duration: '8 Hours of Coverage',
-    deliverables: '550+ Edited High-Res Images',
+    id: 's_newborn',
+    category: 'newborn',
+    name: 'The Baby Masterpiece',
+    basePrice: 850,
+    tagline: 'Premium, safely-posed studio newborn sessions celebrating your baby’s initial sweet weeks.',
+    duration: 'Up to 3.5 Hours Session',
+    deliverables: '40 Fine-Art Retouched Images',
     inclusions: [
-      'Pre-wedding scouting & planning consultation',
-      'Two professional photo-artists (Falguni + Lead second)',
-      'Cinematic color grading & bespoke highlight retouching',
-      'Luxury private online gallery with lifetime access',
-      'Personal print permissions & digital downloads'
+      'Pre-session style planning & custom design selection',
+      'Exclusive access to our premium organic wraps, blankets, & artisan props',
+      'Professional certified newborn safety-first styling (immunized & certified)',
+      'Full custom temperature control & premium noise-conditioned studio space',
+      'Bespoke highlight retouching & high-resolution digital delivery'
     ],
     extraOptions: [
-      { id: 'ext_w_album', name: 'Fine Art Velvet Wedding Album (12"x12")', price: 650, description: 'Handcrafted custom-bound velvet photo album with luxury display box.' },
-      { id: 'ext_w_hours', name: 'Additional Coverage Hour', price: 250, description: 'Keep the story moving into the night with extra hours of creative capture.' },
-      { id: 'ext_w_drone', name: 'Aerial Drone Scenic Photography', price: 350, description: 'Dramatic overhead views of your wedding venue and local South Australian landscapes.' }
+      { id: 'ext_n_album', name: 'Fine-Art Velvet Keepsake Album (8"x8")', price: 390, description: 'Bespoke hand-bound velvet photo album with luxury display keepsake box.' },
+      { id: 'ext_n_home', name: 'On-Location In-Home Setup Upgrade', price: 180, description: 'We bring the specialized studio equipment, warm blankets, and safety rigging directly to your home.' },
+      { id: 'ext_n_rush', name: 'Express Retouch Delivery (72 hours)', price: 150, description: 'For families seeking their custom gallery fast for instant announcement prints.' }
     ]
   },
   {
-    id: 's_portrait',
-    category: 'portrait',
-    name: 'The Fine-Art Portraiture',
-    basePrice: 590,
-    tagline: 'Stunning magazine-style portraits for creative minds, professionals, and artists.',
-    duration: '2 Hours Studio or Location Session',
-    deliverables: '25 Master-Retouched High-Res Images',
+    id: 's_maternity',
+    category: 'maternity',
+    name: 'The Divine Maternity',
+    basePrice: 550,
+    tagline: 'Exquisite, magazine-style pregnancy portraits captured in studio comfort or SA landscapes.',
+    duration: '1.5 Hours Creative Session',
+    deliverables: '25 Master-Retouched Images',
     inclusions: [
-      ' Wardrobe curation and style direction consultation',
-      'Professional strobe & natural light master setups',
-      'Deep boutique magazine-grade facial retouching',
-      'High-resolution digital delivery in multiple aspect ratios'
+      'Complimentary access to our curated maternity client wardrobe range (flowing gowns, custom silks)',
+      'Expert styling direction & flattering editorial posing guidance',
+      'Luxury skin-tone calibration & high-fashion master facial retouching',
+      'Partner & young sibling portrait integration'
     ],
     extraOptions: [
-      { id: 'ext_p_makeup', name: 'On-set Professional Hair & Makeup Artist', price: 220, description: 'Premium makeup styling designed specifically for studio strobe lighting.' },
-      { id: 'ext_p_retouch', name: 'Additional Fully Retouched Master Frame', price: 45, description: 'Single high-fashion bespoke detail-retouched portrait of your choice.' }
+      { id: 'ext_m_mua', name: 'On-set Professional Hair & Makeup Artist', price: 220, description: 'Bespoke makeup artist styling specifically optimized for fine-art studio flash lighting.' },
+      { id: 'ext_m_scenic', name: 'Scenic Outdoor Sunrise/Sunset Travel Upgrade', price: 120, description: 'Capture majestic silhouettes in Barossa vineyards or Grange sand dunes.' }
+    ]
+  },
+  {
+    id: 's_milestone',
+    category: 'milestone',
+    name: 'The Milestone Collection',
+    basePrice: 450,
+    tagline: 'Capturing precious milestone chapters including sitters, crawlers, and first birthday celebrations.',
+    duration: '1 Hour Custom Session',
+    deliverables: '20 Clean Editorial Images',
+    inclusions: [
+      'Customized minimalist studio sets tailored to your nursery theme',
+      'Patience-assured play direction for authentic baby smiles',
+      'Signature soft-diffused organic neutral lighting setups',
+      'High-resolution digital gallery with full print permissions'
+    ],
+    extraOptions: [
+      { id: 'ext_mi_smash', name: 'Organic Birthday Cake Smash Upgrade', price: 130, description: 'Includes a customized minimalist allergen-free smash-cake that perfectly coordinates with sets.' },
+      { id: 'ext_mi_extra', name: 'Additional Fully Retouched Master Frame', price: 35, description: 'Single high-fashion bespoke detail-retouched baby portrait of your choice.' }
     ]
   },
   {
     id: 's_family',
     category: 'family',
-    name: 'The Living Legacy',
+    name: 'The Golden Family Legacy',
     basePrice: 650,
-    tagline: 'Warm, genuine family interactions captured in South Australia’s most beautiful golden landscapes.',
+    tagline: 'Warm, editorial family interactions set amongst South Australia’s most beautiful golden landscapes.',
     duration: '1.5 Hours Golden-Hour Session',
     deliverables: '50+ Warm-Toned Edited Images',
     inclusions: [
-      'Sunset timing planning & SA location vetting (Beach, Vineyard or Park)',
-      'Natural prompt-driven candid and relaxed posing guidance',
-      'Carefully calibrated warm neutral palette styling',
+      'Sunset timing planning & SA location vetting (Beach, Vineyards or Hills)',
+      'Natural, candid prompt-driven posing that avoids stiff studio styling',
+      'Carefully curated wardrobe color palette harmony consultation',
       'High-res gallery with download and direct printing access'
     ],
     extraOptions: [
-      { id: 'ext_f_prints', name: 'Giclée Fine Art Print Bundle (5x Large)', price: 150, description: 'Museum-quality archival prints on heavy textured cotton paper.' },
-      { id: 'ext_f_extended', name: 'Extended Family Session (Up to 12 people)', price: 180, description: 'Incorporate grandparents, siblings, or extended family members seamlessly.' }
-    ]
-  },
-  {
-    id: 's_commercial',
-    category: 'commercial',
-    name: 'The Prestige Brand Campaign',
-    basePrice: 1600,
-    tagline: 'High-production visual content for luxury brands, architecture, and editorial campaigns.',
-    duration: 'Half-Day Shoot (4 Hours)',
-    deliverables: '40 Premium Lifestyle/Commercial Frames',
-    inclusions: [
-      'Commercial moodboard definition & artistic pre-production planning',
-      'Commercial licensing rights for website, ocean media, & print',
-      'Precision architectural or product layout adjustments',
-      'Bespoke luxury-brand high-end post-production'
-    ],
-    extraOptions: [
-      { id: 'ext_c_fullday', name: 'Upgrade to Full-Day Session (8 Hours)', price: 1200, description: 'Double the creative time for extensive product selections or hotel/estate captures.' },
-      { id: 'ext_c_social', name: 'Premium Vertical Social Clips (5x Reels/Videos)', price: 600, description: 'Ultra-clear high-definition vertical video segments for Instagram/TikTok.' }
+      { id: 'ext_f_book', name: 'Velvet Fine-Art Hardcover Book (10"x10")', price: 420, description: 'Museum-quality archival book designed to preserve your timeless family legacy.' },
+      { id: 'ext_f_extended', name: 'Extended Family Session (Up to 10 people)', price: 150, description: 'Incorporate grandparents or siblings seamlessly.' }
     ]
   }
 ];
@@ -225,47 +225,47 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
 export const CLIENT_REVIEWS: ClientReview[] = [
   {
     id: 'r1',
-    author: 'Eleanor & Julian West',
+    author: 'Sophia & Marcus Vance',
     rating: 5,
-    reviewText: 'Falguni did not just take photos; she crafted an absolute masterpiece. Our wedding in McLaren Vale looked like a pages-spread straight out of Vogue Australia! She is extremely professional, calm, and has an incredible eye for natural shadows. 5 stars is an understatement.',
+    reviewText: 'Falguni is an absolute genius. We booked her for our newborn session in her gorgeous Lightsview studio. She handled our 8-day-old baby with such incredible, safety-first tenderness (she is fully certified!). The resulting photos looked like pages out of an editorial baby journal. Unrivaled experience.',
     date: 'February 2026',
-    serviceType: 'Wedding Photography',
-    location: 'McLaren Vale'
+    serviceType: 'The Baby Masterpiece',
+    location: 'Lightsview'
   },
   {
     id: 'r2',
     author: 'Dr. Sarah Al-Ahmadi',
     rating: 5,
-    reviewText: 'As someone who is usually extremely camera-shy, I was amazed by my fine-art portrait experience. Falguni has a warm, beautiful presence that instantly washes away anxiety. Her studio in Lightsview is stunning, and the resulting photos have elevated my entire professional branding.',
+    reviewText: 'As someone who was feeling quite self-conscious during late pregnancy, Falguni made me feel like an absolute goddess during my fine-art maternity portrait shoot. Her studio is so clean, warm, and inviting. She is so incredibly patient and her gaze for shadow and light is phenomenal.',
     date: 'April 2026',
-    serviceType: 'Fine-Art Portraiture',
+    serviceType: 'The Divine Maternity',
     location: 'Lightsview Studio'
   },
   {
     id: 'r3',
     author: 'The Harrington Family',
     rating: 5,
-    reviewText: 'We booked Falguni for a golden hour family shoot at Grange Beach. She was so patient with our two hyperactive children and captured some of the most beautiful, candid laughter we have ever seen. These photos will be cherished for generations. Highly recommended!',
+    reviewText: 'We can’t recommend Falguni enough! She captured our baby girl’s 6-month sitter milestone. Falguni was incredibly patient with her, singing songs and taking her time. These photos are clean, elegant, and capture our daughter’s sweet giggle perfectly. A true South Australian treasure.',
     date: 'January 2026',
-    serviceType: 'The Living Legacy Family Shoot',
+    serviceType: 'The Milestone Collection',
     location: 'Grange Beach'
   },
   {
     id: 'r4',
-    author: 'Marcus Vance, Director at Luxe Living',
+    author: 'Eleanor & Julian West',
     rating: 5,
-    reviewText: 'Falguni’s commercial photography for our contemporary architectural showcase in Northfield SA was phenomenal. Her understanding of lines, light, and symmetry is outstanding. She delivered the campaign images ahead of schedule and the visual depth was superb.',
+    reviewText: 'Absolute magic. We have used Falguni for both our maternity shoot and newborn legacy sessions. She and her work are premium. The custom velvet photography book she printed for our coffee table is of superb, museum-like quality. Our family will cherish these forever.',
     date: 'March 2026',
-    serviceType: 'Prestige Brand Campaign',
-    location: 'Northfield SA'
+    serviceType: 'Newborn & Maternity Bundle',
+    location: 'McLaren Vale'
   },
   {
     id: 'r5',
-    author: 'Sophia & Liam Peterson',
+    author: 'The Peterson Family',
     rating: 5,
-    reviewText: 'Absolute magic. Falguni caught every emotional sparkle of our wedding. She and her second shooter blends in so smoothly but captures every single detail. We opted for the custom velvet photo book, and the print quality is stunning. Thank you so much, Falguni!',
+    reviewText: 'Falguni took our family outdoor session at Grange Beach during the golden sunset. Our kids are extremely hyperactive but Falguni adjusted the pacing so naturally, making it feel like a fun beach walk. The warm neutral tones in her final frames are absolutely gorgeous.',
     date: 'November 2025',
-    serviceType: 'Wedding Photography',
+    serviceType: 'The Golden Family Legacy',
     location: 'Adelaide Hills'
   }
 ];

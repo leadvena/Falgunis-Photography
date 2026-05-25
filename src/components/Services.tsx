@@ -11,7 +11,7 @@ interface ServicesProps {
 export default function Services({ onSelectServiceAndExtras }: ServicesProps) {
   // Store selected extras by package ID as a set
   const [selectedExtrasByPackage, setSelectedExtrasByPackage] = useState<Record<string, string[]>>({});
-  const [activePackageId, setActivePackageId] = useState<string>('s_wedding');
+  const [activePackageId, setActivePackageId] = useState<string>('s_newborn');
 
   const handleToggleExtra = (packageId: string, extraId: string) => {
     setSelectedExtrasByPackage((prev) => {
