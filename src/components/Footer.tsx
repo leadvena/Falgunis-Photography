@@ -45,7 +45,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                   <button
                     onClick={() => {
                       onNavigate(link.id);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     className="font-sans text-xs text-charcoal-400 hover:text-champagne-300 font-light tracking-wide transition-colors cursor-pointer"
                   >

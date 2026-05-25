@@ -73,20 +73,18 @@ export default function Gallery() {
         </div>
 
         {/* Asymmetric Portfolio Grid */}
-        <motion.div
+        <div
           id="portfolio-items-grid"
-          layout
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:auto-rows-[300px]"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence>
             {filteredItems.map((item, index) => (
               <motion.div
                 id={`gallery-card-${item.id}`}
-                layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
                 className={`relative overflow-hidden group cursor-pointer border border-charcoal-900 bg-charcoal-900 ${getGridSpanClasses(item.id, index)}`}
@@ -118,7 +116,7 @@ export default function Gallery() {
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
 
       {/* Luxury Immersive Lightbox Display */}

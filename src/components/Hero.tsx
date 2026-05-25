@@ -13,24 +13,20 @@ export default function Hero({ onPortfolioCall, onBookingCall }: HeroProps) {
       id="hero-section"
       className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-charcoal-950"
     >
-      {/* Background Image with Dramatic Ken Burns Zoom Effect */}
-      <div className="absolute inset-0 z-0">
-        <motion.div
-          id="hero-image-zoom"
-          animate={{
-            scale: [1.02, 1.08],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeOut",
-          }}
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${HERO_IMAGE})`,
-          }}
-        />
+      {/* Background Video with subtle opacity styling */}
+      <div className="absolute inset-0 z-0 bg-charcoal-950">
+        <video
+          id="hero-background-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-60"
+        >
+          <source src="https://www.pexels.com/download/video/6849058/" type="video/mp4" />
+          {/* Fallback image if video fails to load or on slower connections */}
+          <img src={HERO_IMAGE} alt="Bespoke Studio Session" className="w-full h-full object-cover" />
+        </video>
         {/* Soft, multi-layered vignette and dark luxury overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-charcoal-950/50 z-10" />
         <div className="absolute inset-0 bg-charcoal-950/30 mix-blend-multiply z-10" />
