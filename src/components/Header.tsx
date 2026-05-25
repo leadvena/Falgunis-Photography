@@ -66,7 +66,6 @@ export default function Header({ activePage, setActivePage }: HeaderProps) {
               key={item.id}
               onClick={() => {
                 setActivePage(item.id);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="relative py-2 font-sans text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer focus:outline-none focus:text-champagne-300"
             >
@@ -130,7 +129,6 @@ export default function Header({ activePage, setActivePage }: HeaderProps) {
                   setMobileMenuOpen(false);
                   setTimeout(() => {
                     setActivePage(item.id);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }, 100);
                 }}
                 className={`text-sm tracking-widest uppercase transition-all py-3 ${

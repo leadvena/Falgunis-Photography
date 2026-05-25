@@ -24,13 +24,13 @@ export default function Gallery() {
   const getGridSpanClasses = (id: string, idx: number) => {
     switch (id) {
       case 'p1': return 'md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto'; // Big primary hero
-      case 'p2': return 'md:col-span-1 md:row-span-2 aspect-[3/4]'; // Tall portrait
-      case 'p3': return 'md:col-span-1 md:row-span-1 aspect-[4/3]'; // standard box
-      case 'p4': return 'md:col-span-1 md:row-span-1 aspect-[4/3]'; // standard box
-      case 'p5': return 'md:col-span-1 md:row-span-1 aspect-[4/3]'; // standard box
-      case 'p6': return 'md:col-span-1 md:row-span-1 aspect-[4/3]'; // standard box
+      case 'p2': return 'md:col-span-1 md:row-span-2 aspect-[3/4] md:aspect-auto'; // Tall portrait
+      case 'p3': return 'md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto'; // standard box
+      case 'p4': return 'md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto'; // standard box
+      case 'p5': return 'md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto'; // standard box
+      case 'p6': return 'md:col-span-1 md:row-span-1 aspect-[4/3] md:aspect-auto'; // standard box
       case 'p7': return 'md:col-span-2 md:row-span-1 aspect-[16/9] md:aspect-auto'; // Wide landscape
-      default: return 'md:col-span-1 md:row-span-1 aspect-square';
+      default: return 'md:col-span-1 md:row-span-1 aspect-square md:aspect-auto';
     }
   };
 
@@ -76,7 +76,7 @@ export default function Gallery() {
         <motion.div
           id="portfolio-items-grid"
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[250px] md:auto-rows-[300px]"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:auto-rows-[300px]"
         >
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item, index) => (
