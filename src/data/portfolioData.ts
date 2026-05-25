@@ -3,7 +3,7 @@ import { PortfolioItem, ServicePackage, ClientReview } from '../types';
 // Let's resolve the generated asset paths beautifully as strings.
 // This allows clean static bundling under Vite without strict module typings checking.
 const heroWedding = '/src/assets/images/hero_wedding_1779671234377.png';
-const falguniPortrait = '/src/assets/images/falguni_portrait_1779671255101.png';
+const falguniPortrait = '/src/assets/images/falguni_portrait.jpg';
 const familyShoot = '/src/assets/images/family_shoot_1779671272789.png';
 const commercialShoot = '/src/assets/images/commercial_shoot_1779671292380.png';
 

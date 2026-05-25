@@ -36,7 +36,7 @@ export default function About() {
                   src={FALGUNI_PORTRAIT}
                   alt="Portrait of Falguni"
                   referrerPolicy="no-referrer"
-                  className="w-full max-w-[360px] aspect-[3/4] object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full max-w-[360px] aspect-[3/4] object-cover transition-all duration-700 hover:scale-[1.02]"
                 />
                 {/* Thin elegant frame overlay */}
                 <div className="absolute inset-2 border border-champagne-400/40 pointer-events-none" />
