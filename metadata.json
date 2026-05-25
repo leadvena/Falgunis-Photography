@@ -1,0 +1,6 @@
+{
+  "name": "Falguni's Photography",
+  "description": "Premium luxury editorial photography portfolio for Falguni's Photography based in Lightsview, South Australia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
